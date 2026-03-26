@@ -1,0 +1,12 @@
+package tests;
+
+import org.testng.annotations.Test;
+
+public class SetupTest {
+
+	  @Test
+	    public void verifyFrameworkSetup() {
+		  
+	        System.out.println("Hybrid Framework Setup Successful");
+	    }
+}

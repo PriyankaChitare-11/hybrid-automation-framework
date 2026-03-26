@@ -2,11 +2,15 @@ package tests;
 
 import org.testng.annotations.Test;
 
-public class SetupTest {
+import base.BaseTest;
+import driver.DriverFactory;
+
+public class SetupTest extends BaseTest {
 
 	  @Test
-	    public void verifyFrameworkSetup() {
+	    public void testDriver() {
 		  
-	        System.out.println("Hybrid Framework Setup Successful");
+		  System.out.println("Title: " + DriverFactory.getDriver().getTitle());
+		
 	    }
 }
