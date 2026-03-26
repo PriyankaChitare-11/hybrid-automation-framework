@@ -5,6 +5,8 @@ import org.testng.annotations.BeforeMethod;
 
 import driver.DriverFactory;
 import enums.BrowserType;
+import enums.Environment;
+import factory.EnvFactory;
 import utils.ConfigReaderUtility;
 
 public class BaseTest {
@@ -15,12 +17,16 @@ public class BaseTest {
 	public void setup() {
 		
 		// Here we are calling browser
-		
+		//Browser
 		BrowserType bowser = BrowserType.fromString(config.getBrowser());
-		
 		DriverFactory.initDriver(bowser);
 		
-		DriverFactory.getDriver().get("https://sauce-demo.myshopify.com/");
+		//Environment
+		Environment env = Environment.fromString(config.getENV());
+		String url = EnvFactory.getBaseUrl(env);
+		
+		//open URL
+		DriverFactory.getDriver().get(url);
 		
 	}
 	

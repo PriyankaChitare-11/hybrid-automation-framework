@@ -1,0 +1,26 @@
+package factory;
+
+import enums.Environment;
+
+public class EnvFactory {
+
+	public static String getBaseUrl(Environment env) {
+
+		switch (env) {
+
+		case QA:
+			return env.getUrl();
+
+		case DEV:
+			return env.getUrl();
+
+		case PROD:
+			return env.getUrl();
+
+		default:
+			throw new RuntimeException("Invalid Environment");
+
+		}
+	}
+
+}

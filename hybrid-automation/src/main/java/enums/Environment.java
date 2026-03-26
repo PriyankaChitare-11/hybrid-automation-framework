@@ -15,6 +15,10 @@ public enum Environment {
     public String getUrl() {
         return url;
     }
+    
+    public static Environment fromString(String env) {
+    	return Environment.valueOf(env.trim().toUpperCase());
+    }
 
 
 }
