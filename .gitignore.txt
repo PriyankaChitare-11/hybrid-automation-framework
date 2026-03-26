@@ -1,0 +1,8 @@
+target/
+node_modules/
+*.log
+*.class
+.idea/
+*.iml
+allure-results/
+screenshots/
