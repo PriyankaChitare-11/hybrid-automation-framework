@@ -1,9 +1,24 @@
-.metadata/
 target/
-node_modules/
-*.log
+bin/
+build/
 *.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.metadata/
 .idea/
 *.iml
+.project
+.classpath
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Test outputs
 allure-results/
 screenshots/
