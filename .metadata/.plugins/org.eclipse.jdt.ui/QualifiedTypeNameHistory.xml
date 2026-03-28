@@ -4,16 +4,32 @@
     <fullyQualifiedTypeName name="java.util.Properties"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+=======
+>>>>>>> develop
     <fullyQualifiedTypeName name="io.github.bonigarcia.wdm.WebDriverManager"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
     <fullyQualifiedTypeName name="utils.ConfigReaderUtility"/>
     <fullyQualifiedTypeName name="org.testng.annotations.BeforeMethod"/>
     <fullyQualifiedTypeName name="enums.BrowserType"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="driver.DriverFactory"/>
+=======
+>>>>>>> develop
     <fullyQualifiedTypeName name="org.testng.annotations.AfterMethod"/>
     <fullyQualifiedTypeName name="base.BaseTest"/>
     <fullyQualifiedTypeName name="enums.Environment"/>
     <fullyQualifiedTypeName name="factory.EnvFactory"/>
+<<<<<<< HEAD
+=======
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="driver.DriverFactory"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="pages.HomePage"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
+    <fullyQualifiedTypeName name="pages.ProductPage"/>
+>>>>>>> develop
 </qualifiedTypeNameHistroy>
