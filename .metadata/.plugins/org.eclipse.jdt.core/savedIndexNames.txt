@@ -1,5 +1,4 @@
 INDEX VERSION 1.131+D:\Project\Sauce-Demo Hybrid Framework\.metadata\.plugins\org.eclipse.jdt.core
-<<<<<<< HEAD
 2224531620.index
 491563313.index
 3487066297.index
@@ -8,16 +7,6 @@ INDEX VERSION 1.131+D:\Project\Sauce-Demo Hybrid Framework\.metadata\.plugins\or
 712797868.index
 2651558206.index
 266056777.index
-=======
-491563313.index
-2224531620.index
-3487066297.index
-3712398725.index
-1386505308.index
-266056777.index
-712797868.index
-2651558206.index
->>>>>>> develop
 978761444.index
 244292774.index
 131883664.index
@@ -30,13 +19,8 @@ INDEX VERSION 1.131+D:\Project\Sauce-Demo Hybrid Framework\.metadata\.plugins\or
 996105450.index
 1095044823.index
 2303596114.index
-<<<<<<< HEAD
 1895054637.index
 3280175720.index
-=======
-3280175720.index
-1895054637.index
->>>>>>> develop
 625341455.index
 3918961023.index
 2368254216.index
@@ -67,15 +51,9 @@ INDEX VERSION 1.131+D:\Project\Sauce-Demo Hybrid Framework\.metadata\.plugins\or
 3552684993.index
 1866445061.index
 3108593086.index
-<<<<<<< HEAD
 1349843494.index
 334179701.index
 2290040917.index
-=======
-2290040917.index
-1349843494.index
-334179701.index
->>>>>>> develop
 4039846622.index
 2389706490.index
 1613695357.index
@@ -92,8 +70,8 @@ INDEX VERSION 1.131+D:\Project\Sauce-Demo Hybrid Framework\.metadata\.plugins\or
 392546008.index
 4106737296.index
 2454128664.index
-1865797976.index
 3546689644.index
+1865797976.index
 3669413200.index
 37574892.index
 3916962929.index

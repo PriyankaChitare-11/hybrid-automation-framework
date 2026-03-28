@@ -29,6 +29,7 @@ public class BaseTest {
 		
 		//open URL
 		DriverFactory.getDriver().get(url);
+		DriverFactory.getDriver().manage().window().maximize();
 		
 	}
 	
