@@ -1,24 +1,9 @@
-target/
-bin/
-build/
-*.class
-*.jar
-*.war
-*.ear
-
-# IDE
+# Eclipse
 .metadata/
-.idea/
-*.iml
-.project
-.classpath
 
-# Logs
-*.log
+# Build folder
+target/
 
-# Node
-node_modules/
-
-# Test outputs
-allure-results/
-screenshots/
+# OS files
+.DS_Store
+Thumbs.db

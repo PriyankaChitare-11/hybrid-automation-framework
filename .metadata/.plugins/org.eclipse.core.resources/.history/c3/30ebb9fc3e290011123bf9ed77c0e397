@@ -1,0 +1,22 @@
+package tests;
+
+import org.testng.annotations.Test;
+
+import driver.DriverFactory;
+import enums.BrowserType;
+
+public class SetupTest {
+
+	  @Test
+	    public void testDriver() {
+		  
+		  DriverFactory.initDriver(BrowserType.CHROME);
+		  
+		  DriverFactory.getDriver().get("https://sauce-demo.myshopify.com/");
+		  
+	      System.out.println("Title : " + DriverFactory.getDriver().getTitle());
+	      
+	      DriverFactory.quitDriver();
+	            
+	    }
+}
