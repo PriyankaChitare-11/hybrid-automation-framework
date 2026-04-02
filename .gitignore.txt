@@ -13,16 +13,6 @@ target/
 .settings/
 .loadpath
 
-# =========================
-# IntelliJ (optional)
-# =========================
-.idea/
-*.iml
-
-# =========================
-# VS Code (optional)
-# =========================
-.vscode/
 
 # =========================
 # OS Files
@@ -42,21 +32,6 @@ logs/
 test-output/
 allure-results/
 allure-report/
-
-# =========================
-# Selenium / Drivers
-# =========================
-*.exe
-*.driver
-
-# =========================
-# Environment / Config
-# =========================
-.env
-*.properties
-
-# (Optional: keep config if needed)
-!src/test/resources/config.properties
 
 # =========================
 # Temporary Files
