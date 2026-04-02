@@ -1,3 +1,4 @@
+
 # =========================
 # Maven / Build
 # =========================
@@ -40,6 +41,29 @@ logs/
 # Test Output
 # =========================
 test-output/
+=======
+target/
+bin/
+build/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.metadata/
+.idea/
+*.iml
+.project
+.classpath
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Test outputs
 allure-results/
 allure-report/
 

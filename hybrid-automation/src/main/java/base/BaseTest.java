@@ -16,8 +16,10 @@ public class BaseTest {
 	@BeforeMethod
 	public void setup() {
 		
-		// Here we are calling browser
-		//Browser
+		ConfigReaderUtility config = ConfigReaderUtility.getInstance();
+		
+		
+		//Browser - Here we are actual calling browser
 		BrowserType bowser = BrowserType.fromString(config.getBrowser());
 		DriverFactory.initDriver(bowser);
 		
