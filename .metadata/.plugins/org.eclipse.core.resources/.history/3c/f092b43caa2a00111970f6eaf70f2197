@@ -1,0 +1,65 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import driver.DriverFactory;
+import utils.WaitUtils;
+
+public class BasePage {
+	protected WebDriver driver;
+	protected WaitUtils waitUtils;
+	
+	public BasePage() {
+		this.driver = DriverFactory.getDriver();
+		this.waitUtils=new WaitUtils();
+	}
+	
+	protected WebElement getElement(By locator) {
+		
+		return waitUtils.waitForElementVisible(locator);
+		
+	}
+	
+	protected void scrollToElement(By locator) {
+	    WebElement element = waitUtils.waitForElementVisible(locator);
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+	}
+	
+//	protected void click(By locator) {
+//		waitUtils.waitForElementClickable(locator).click();;
+//	}
+	protected void click(By locator) {
+	    WebElement element = waitUtils.waitForElementClickable(locator);
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+
+	    // Scroll to center (better visibility)
+	    js.executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+
+	    try {
+	        element.click();
+	    } catch (Exception e) {
+	        // Fallback to JS click if normal click fails
+	        js.executeScript("arguments[0].click();", element);
+	    }
+	}
+	
+	protected void sendKeys(By locator,String value) {
+		//getElement(locator).sendKeys(value);
+		waitUtils.waitForElementVisible(locator).sendKeys(value);
+	}
+	
+	protected String getText(By locator) {
+		//return getElement(locator).getText();
+		return waitUtils.waitForElementVisible(locator).getText();
+	}
+
+	protected boolean isDisplayed(By locator) {
+		//return getElement(locator).isDisplayed();
+		return waitUtils.waitForElementVisible(locator).isDisplayed();
+	}
+	
+}

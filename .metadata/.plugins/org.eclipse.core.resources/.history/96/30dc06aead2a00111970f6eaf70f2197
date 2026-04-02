@@ -1,0 +1,28 @@
+package pages;
+
+import org.openqa.selenium.By;
+
+import utils.WaitUtils;
+
+public class ProductPage extends BasePage{
+	
+	protected WaitUtils waitUtils;
+	
+	private By addToCartBtn = By.xpath("//*[@type='submit']|//*[@value=\"Add to Cart\"]");
+	private By cartCount = By.cssSelector(".cart-count"); // adjust if needed
+	
+	
+	public void addToCard() {
+		click(addToCartBtn);
+		  waitUtils.waitForTextPresent(cartCount, "1");
+			
+	}
+	
+	public boolean isProductPageLoaded() {
+		return isDisplayed(addToCartBtn);
+	}
+	
+	 // WAIT FOR CART UPDATE
+  
+
+}
