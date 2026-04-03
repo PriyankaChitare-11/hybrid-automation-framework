@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+.metadata/
+*.log
+*.snap
+target/
+bin/
+=======
 
 # =========================
 # Maven / Build
@@ -94,3 +101,4 @@ allure-report/
 # =========================
 coverage/
 jacoco.exec
+>>>>>>> e6435e32cb47623bb9324a50eb92d6f6e401260d
