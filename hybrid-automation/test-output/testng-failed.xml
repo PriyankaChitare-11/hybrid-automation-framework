@@ -5,7 +5,9 @@
     <classes>
       <class name="tests.SetupTest">
         <methods>
-          <include name="testDriver"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="testAddToCardFlow"/>
         </methods>
       </class> <!-- tests.SetupTest -->
     </classes>

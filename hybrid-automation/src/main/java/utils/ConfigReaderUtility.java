@@ -10,7 +10,7 @@ public class ConfigReaderUtility {
 	 * Here we are hiding config file logic
 	 * And Providead clean access methods this is called Encapsulation
      */
-	
+	private static ConfigReaderUtility instance; // Singleton Pattern
 	private Properties prop;
 	
 	public ConfigReaderUtility() {
@@ -18,7 +18,9 @@ public class ConfigReaderUtility {
 		try {
 			
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("src/test/resources/config/config.properties");
+			FileInputStream fis = new FileInputStream(
+					"src/test/resources/config/config.properties"
+					);
 			prop.load(fis);
 			
 		}catch(IOException e) {
@@ -26,6 +28,14 @@ public class ConfigReaderUtility {
 			throw new RuntimeException("Failed to load config file");
 		}
 		
+	}
+	
+	public static ConfigReaderUtility getInstance() {
+		if(instance == null) {
+			instance = new ConfigReaderUtility();
+		}
+		
+		return instance;
 	}
 	
 	public String getBrowser() {
