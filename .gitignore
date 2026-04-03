@@ -1,3 +1,5 @@
 .metadata/
-target/
 *.log
+*.snap
+target/
+bin/
