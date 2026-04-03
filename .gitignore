@@ -1,0 +1,96 @@
+
+# =========================
+# Maven / Build
+# =========================
+target/
+*.log
+
+# =========================
+# Eclipse
+# =========================
+.metadata/
+.classpath
+.project
+.settings/
+.loadpath
+
+# =========================
+# IntelliJ (optional)
+# =========================
+.idea/
+*.iml
+
+# =========================
+# VS Code (optional)
+# =========================
+.vscode/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Test Output
+# =========================
+test-output/
+=======
+target/
+bin/
+build/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.metadata/
+.idea/
+*.iml
+.project
+.classpath
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Test outputs
+allure-results/
+allure-report/
+
+# =========================
+# Selenium / Drivers
+# =========================
+*.exe
+*.driver
+
+# =========================
+# Environment / Config
+# =========================
+.env
+*.properties
+
+# (Optional: keep config if needed)
+!src/test/resources/config.properties
+
+# =========================
+# Temporary Files
+# =========================
+*.tmp
+*.bak
+*.swp
+
+# =========================
+# Coverage Reports
+# =========================
+coverage/
+jacoco.exec
