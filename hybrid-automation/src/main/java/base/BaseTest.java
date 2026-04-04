@@ -1,5 +1,6 @@
 package base;
 
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -34,7 +35,13 @@ public class BaseTest {
 	}
 	
 	@AfterMethod
-	public void tearDown() {
+	public void tearDown(ITestResult result) {
+		
+		if(result.getStatus()== ITestResult.FAILURE) {
+			
+			System.out.println("Failure detected in BaseTest");
+			//Optional : we can also take screen short here
+		}
 		DriverFactory.quitDriver();
 	}
 
