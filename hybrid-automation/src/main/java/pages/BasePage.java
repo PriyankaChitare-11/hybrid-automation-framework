@@ -1,15 +1,19 @@
 package pages;
 
+import org.apache.logging.log4j.Logger;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import driver.DriverFactory;
+import utils.LoggerUtil;
 import utils.WaitUtils;
 
 public class BasePage {
 
+	protected Logger log = LoggerUtil.getLogger(this.getClass());
 	protected WebDriver driver;
 
 	public BasePage() {
