@@ -23,7 +23,7 @@ public class SetupTest extends BaseTest {
 
         Assert.assertTrue(product.isProductPageLoaded(), "product page not loaded");
 
-       // Assert.fail("Testing screenshot on failure"); // This is used to intentionally fail a test cases
+       //Assert.fail("Testing screenshot on failure"); // This is used to intentionally fail a test cases
 
         product.addToCard();
     }
