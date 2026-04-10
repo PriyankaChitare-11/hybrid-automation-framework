@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Hybrid Framework Suite" parallel="tests" thread-count="3">
+
+    <!-- LISTENER CONFIG -->
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
+    <!--  TEST EXECUTION -->
+    <test name="Chrome-QA-Test1">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env" value="qa"/>
+        <classes>
+            <class name="tests.SetupTest"/>
+        </classes>
+    </test>
+    
+    <test name="Edge-DEV-Test2">
+    <parameter name="browser" value="edge"/>
+    <parameter name="env" value="dev"/>
+        <classes>
+            <class name="tests.SetupTest"/>
+        </classes>
+    </test>
+    
+     <test name="Firefox-PROD-Test3">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="env" value="prod"/>
+        <classes>
+            <class name="tests.SetupTest"/>
+        </classes>
+    </test>
+</suite>

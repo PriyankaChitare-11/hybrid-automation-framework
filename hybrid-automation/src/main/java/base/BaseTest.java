@@ -1,12 +1,14 @@
 package base;
 
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import driver.DriverFactory;
 import enums.BrowserType;
 import enums.Environment;
-import factory.EnvFactory;
+import env.EnvFactory;
 import utils.ConfigReaderUtility;
 
 public class BaseTest {
@@ -14,27 +16,26 @@ public class BaseTest {
 	ConfigReaderUtility config = new ConfigReaderUtility();
 	
 	@BeforeMethod
-	public void setup() {
+	@Parameters({"browser","env"})
+	public void setup(String browser, String env) {
 		
-		ConfigReaderUtility config = ConfigReaderUtility.getInstance();
+		  //Convert String into Enum
+        BrowserType browserType = BrowserType.fromString(browser);
+        Environment environment = Environment.fromString(env);
+        
+		DriverFactory.initDriver(browserType); // dynamic browser
 		
+		String url = EnvFactory.getUrl(environment); // dynamic env
 		
-		//Browser - Here we are actual calling browser
-		BrowserType bowser = BrowserType.fromString(config.getBrowser());
-		DriverFactory.initDriver(bowser);
+		DriverFactory.getDriver().get(url);	
 		
-		//Environment
-		Environment env = Environment.fromString(config.getENV());
-		String url = EnvFactory.getBaseUrl(env);
-		
-		//open URL
-		DriverFactory.getDriver().get(url);
-		DriverFactory.getDriver().manage().window().maximize();
-		
+		System.out.println("Thread: " + Thread.currentThread().getId() 
+				+ "| Browser : " + browser 
+				+ "| Env : " + env);
 	}
 	
 	@AfterMethod
-	public void tearDown() {
+	public void tearDown(ITestResult result) {
 		DriverFactory.quitDriver();
 	}
 

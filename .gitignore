@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-.metadata/
-*.log
-*.snap
-target/
-bin/
-=======
-
 # =========================
-# Maven / Build
+# Maven
 # =========================
-target/
-*.log
+/target/
+!.mvn/wrapper/maven-wrapper.jar
 
 # =========================
 # Eclipse
@@ -19,10 +11,9 @@ target/
 .classpath
 .project
 .settings/
-.loadpath
 
 # =========================
-# IntelliJ (optional)
+# IntelliJ (just in case)
 # =========================
 .idea/
 *.iml
@@ -33,72 +24,57 @@ target/
 .vscode/
 
 # =========================
-# OS Files
+# Logs
+# =========================
+*.log
+logs/
+log/
+
+# =========================
+# TestNG Reports
+# =========================
+/test-output/
+
+# =========================
+# Screenshots (if you store failures)
+# =========================
+/screenshots/
+/reports/
+/allure-results/
+/allure-report/
+
+# =========================
+# OS files
 # =========================
 .DS_Store
 Thumbs.db
 
 # =========================
-# Logs
-# =========================
-logs/
-*.log
-
-# =========================
-# Test Output
-# =========================
-test-output/
-=======
-target/
-bin/
-build/
-*.class
-*.jar
-*.war
-*.ear
-
-# IDE
-.metadata/
-.idea/
-*.iml
-.project
-.classpath
-
-# Logs
-*.log
-
-# Node
-node_modules/
-
-# Test outputs
-allure-results/
-allure-report/
-
-# =========================
-# Selenium / Drivers
-# =========================
-*.exe
-*.driver
-
-# =========================
-# Environment / Config
-# =========================
-.env
-*.properties
-
-# (Optional: keep config if needed)
-!src/test/resources/config.properties
-
-# =========================
-# Temporary Files
+# Temporary files
 # =========================
 *.tmp
 *.bak
 *.swp
 
 # =========================
-# Coverage Reports
+# Environment / secrets
 # =========================
-coverage/
-jacoco.exec
->>>>>>> e6435e32cb47623bb9324a50eb92d6f6e401260d
+.env
+*.properties
+
+# =========================
+# Java compiled files
+# =========================
+*.class
+
+# =========================
+# JAR/WAR files
+# =========================
+*.jar
+*.war
+*.ear
+
+# =========================
+# Node (if any frontend added later)
+# =========================
+node_modules/
