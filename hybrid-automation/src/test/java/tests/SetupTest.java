@@ -16,7 +16,13 @@ public class SetupTest extends BaseTest {
 
         HomePage home = new HomePage();
         ProductPage product = new ProductPage();
+        System.out.println("Thread ID: " + Thread.currentThread().getId());
+        
+        try {
+            Thread.sleep(5000); //add delay to observe parallel
+        } catch (Exception e) {}
 
+        
         Assert.assertTrue(home.isHomePageLoaded(), "Home page not loaded");
 
         home.clickFirstProduct();
